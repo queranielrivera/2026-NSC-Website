@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scripture Memory Hub (KJV)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- Navigation Menu -->
+  <header>
+    <nav>
+      <div class="logo">Scripture Hub</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#flashcards">Flashcards</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <main>
+    <section class="hero">
+      <h1>King James Version Scripture Memorization</h1>
+      <p>"Thy word have I hid in mine heart, that I might not sin against thee." — Psalm 119:11</p>
+    </section>
+
+    <!-- Interactive Flashcard Area -->
+    <section id="flashcards" class="card-section">
+      <h2>Memory Flashcards</h2>
+      <div class="card" id="flashcard" onclick="flipCard()">
+        <p id="card-text">Click to reveal verse text</p>
+      </div>
+      <button onclick="nextVerse()">Next Verse</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
