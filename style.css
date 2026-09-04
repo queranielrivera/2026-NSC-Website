@@ -1,24 +1,27 @@
-.canva-embed-container {
-  width: 100%;
-  max-width: 800px; /* Limits size on large desktop screens */
-  margin: 1.6em auto 0.9em auto;
-  aspect-ratio: 1 / 1.22; /* Retains Canva design proportions dynamically */
-  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
-  border-radius: 8px;
-  overflow: hidden;
+/* Container controlling size and alignment */
+.canva-wrapper {
+  max-width: 500px; /* Adjust this value to change desktop size */
+  width: 90%;       /* Leaves a small padding margin on phone screens */
+  margin: 1.6em auto 0.9em auto; /* 'auto' centers it horizontally */
 }
 
-.canva-iframe {
+.canva-embed {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 122.1816%; /* Retains Canva aspect ratio */
+  box-shadow: 0 2px 8px 0 rgba(63, 69, 81, 0.16);
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.canva-embed iframe {
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   border: none;
-  display: block;
-}
-
-/* Mobile Adjustment (Phones under 600px width) */
-@media (max-width: 600px) {
-  .canva-embed-container {
-    max-width: 100%; /* Spans full width on small mobile devices */
-    margin: 1em auto;
-  }
+  padding: 0;
+  margin: 0;
 }
